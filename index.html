@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>count</title>
+    <META NAME="date" CONTENT="">
+        <link rel="stylesheet" href="style.css">
+       <script src="script.js"></script>
+</head>
+<body>
+     <h1>Counter using Closure</h1>
+      <p id="demo"> </p>
+	<button type="button" onclick="myFunction()">Count </button>
+   
+	</body>
+  <script>
+		function mycounter(){
+          let  counter=0;
+         return function(){
+           counter++;
+        return counter
+  }
+}
+const add=mycounter();
+function myFunction(){
+  let result =add();
+  document.getElementById("demo").innerHTML=result;}
+	</script>
+</html>
+<style>
+   body {
+    background-color: lightblue;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: red;
+    font-size: 35px; 
+    font-weight: bold; 
+}
+
+button {
+    background-color: yellow;
+    border: 1px solid rgb(218, 137, 137);
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px; 
+    transition: background-color 0.3s, color 0.3s; 
+}
+
+button:hover {
+    background-color: green;
+    color: white;
+}
+
+</style>
