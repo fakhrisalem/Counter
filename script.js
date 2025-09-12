@@ -6,7 +6,7 @@ function mycounter(){
 			}
 		}
 		let add=mycounter();
-		let result=add();
 		function myFunction(){
-			document.getElementById("demo").innerHTML=add();
+			let result=add();
+			document.getElementById("demo").innerHTML=result;
 		}
